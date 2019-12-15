@@ -1,0 +1,676 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="29">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>0</ID>
+      <Description>"pointerscan result"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>"pel.exe"+001B353C</Address>
+      <Offsets>
+        <Offset>0</Offset>
+        <Offset>20</Offset>
+        <Offset>30</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>1</ID>
+      <Description>"pointerscan result"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>"pel.exe"+001B3438</Address>
+      <Offsets>
+        <Offset>0</Offset>
+        <Offset>8</Offset>
+        <Offset>C</Offset>
+        <Offset>30</Offset>
+        <Offset>434</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>2</ID>
+      <Description>"pointerscan result"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>"pel.exe"+001B353C</Address>
+      <Offsets>
+        <Offset>0</Offset>
+        <Offset>40C</Offset>
+        <Offset>8</Offset>
+        <Offset>18</Offset>
+        <Offset>26C</Offset>
+        <Offset>D8</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>3</ID>
+      <Description>"pointerscan result"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>"pel.exe"+001B353C</Address>
+      <Offsets>
+        <Offset>0</Offset>
+        <Offset>20</Offset>
+        <Offset>4</Offset>
+        <Offset>1C</Offset>
+        <Offset>30</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>4</ID>
+      <Description>"pointerscan result"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>"pel.exe"+001B353C</Address>
+      <Offsets>
+        <Offset>0</Offset>
+        <Offset>14</Offset>
+        <Offset>10</Offset>
+        <Offset>0</Offset>
+        <Offset>30</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>5</ID>
+      <Description>"pointerscan result"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>"pel.exe"+001B353C</Address>
+      <Offsets>
+        <Offset>0</Offset>
+        <Offset>14</Offset>
+        <Offset>4</Offset>
+        <Offset>0</Offset>
+        <Offset>0</Offset>
+        <Offset>30</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>6</ID>
+      <Description>"pointerscan result"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>"pel.exe"+001B353C</Address>
+      <Offsets>
+        <Offset>0</Offset>
+        <Offset>14</Offset>
+        <Offset>8</Offset>
+        <Offset>0</Offset>
+        <Offset>40</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>7</ID>
+      <Description>"pointerscan result"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>"pel.exe"+001B353C</Address>
+      <Offsets>
+        <Offset>0</Offset>
+        <Offset>14</Offset>
+        <Offset>0</Offset>
+        <Offset>30</Offset>
+        <Offset>88</Offset>
+        <Offset>28</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>8</ID>
+      <Description>"pointerscan result"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>"pel.exe"+001B353C</Address>
+      <Offsets>
+        <Offset>0</Offset>
+        <Offset>14</Offset>
+        <Offset>0</Offset>
+        <Offset>18</Offset>
+        <Offset>0</Offset>
+        <Offset>40</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>9</ID>
+      <Description>"pointerscan result"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>"pel.exe"+001B353C</Address>
+      <Offsets>
+        <Offset>0</Offset>
+        <Offset>14</Offset>
+        <Offset>0</Offset>
+        <Offset>10</Offset>
+        <Offset>30</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>10</ID>
+      <Description>"pointerscan result"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>"pel.exe"+001B353C</Address>
+      <Offsets>
+        <Offset>0</Offset>
+        <Offset>8</Offset>
+        <Offset>14</Offset>
+        <Offset>0</Offset>
+        <Offset>40</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>11</ID>
+      <Description>"pointerscan result"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>"pel.exe"+001B353C</Address>
+      <Offsets>
+        <Offset>0</Offset>
+        <Offset>8</Offset>
+        <Offset>0</Offset>
+        <Offset>1C</Offset>
+        <Offset>30</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>12</ID>
+      <Description>"pointerscan result"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>"pel.exe"+001B353C</Address>
+      <Offsets>
+        <Offset>0</Offset>
+        <Offset>20</Offset>
+        <Offset>30</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>13</ID>
+      <Description>"pointerscan result"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>"pel.exe"+001B353C</Address>
+      <Offsets>
+        <Offset>0</Offset>
+        <Offset>8</Offset>
+        <Offset>14</Offset>
+        <Offset>0</Offset>
+        <Offset>40</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>14</ID>
+      <Description>"pointerscan result"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>"pel.exe"+001B353C</Address>
+      <Offsets>
+        <Offset>0</Offset>
+        <Offset>8</Offset>
+        <Offset>1C</Offset>
+        <Offset>0</Offset>
+        <Offset>30</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>15</ID>
+      <Description>"pointerscan result"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>"pel.exe"+001B353C</Address>
+      <Offsets>
+        <Offset>0</Offset>
+        <Offset>8</Offset>
+        <Offset>10</Offset>
+        <Offset>C</Offset>
+        <Offset>30</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>16</ID>
+      <Description>"pointerscan result"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>"pel.exe"+001B353C</Address>
+      <Offsets>
+        <Offset>0</Offset>
+        <Offset>8</Offset>
+        <Offset>C</Offset>
+        <Offset>10</Offset>
+        <Offset>30</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>17</ID>
+      <Description>"pointerscan result"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>"pel.exe"+001B353C</Address>
+      <Offsets>
+        <Offset>0</Offset>
+        <Offset>8</Offset>
+        <Offset>4</Offset>
+        <Offset>18</Offset>
+        <Offset>30</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>18</ID>
+      <Description>"pointerscan result"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>"pel.exe"+001B353C</Address>
+      <Offsets>
+        <Offset>0</Offset>
+        <Offset>8</Offset>
+        <Offset>0</Offset>
+        <Offset>1C</Offset>
+        <Offset>30</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>19</ID>
+      <Description>"pointerscan result"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>"pel.exe"+001B353C</Address>
+      <Offsets>
+        <Offset>0</Offset>
+        <Offset>8</Offset>
+        <Offset>1C</Offset>
+        <Offset>1C</Offset>
+        <Offset>30</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>20</ID>
+      <Description>"pointerscan result"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>"pel.exe"+001B353C</Address>
+      <Offsets>
+        <Offset>0</Offset>
+        <Offset>14</Offset>
+        <Offset>0</Offset>
+        <Offset>30</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>21</ID>
+      <Description>"pointerscan result"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>"pel.exe"+001B3438</Address>
+      <Offsets>
+        <Offset>0</Offset>
+        <Offset>3E0</Offset>
+        <Offset>8</Offset>
+        <Offset>25C</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>22</ID>
+      <Description>"pointerscan result"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>"pel.exe"+001B3540</Address>
+      <Offsets>
+        <Offset>0</Offset>
+        <Offset>3E0</Offset>
+        <Offset>8</Offset>
+        <Offset>25C</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>23</ID>
+      <Description>"pointerscan result"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>"pel.exe"+001B3438</Address>
+      <Offsets>
+        <Offset>0</Offset>
+        <Offset>40C</Offset>
+        <Offset>8</Offset>
+        <Offset>25C</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>24</ID>
+      <Description>"pointerscan result"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>"pel.exe"+001B3540</Address>
+      <Offsets>
+        <Offset>0</Offset>
+        <Offset>40C</Offset>
+        <Offset>8</Offset>
+        <Offset>25C</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>25</ID>
+      <Description>"pointerscan result"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>"pel.exe"+001B353C</Address>
+      <Offsets>
+        <Offset>0</Offset>
+        <Offset>8</Offset>
+        <Offset>C</Offset>
+        <Offset>30</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>26</ID>
+      <Description>"pointerscan result"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>"pel.exe"+001B353C</Address>
+      <Offsets>
+        <Offset>0</Offset>
+        <Offset>20</Offset>
+        <Offset>10</Offset>
+        <Offset>30</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>27</ID>
+      <Description>"pointerscan result"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>"pel.exe"+001B3438</Address>
+      <Offsets>
+        <Offset>0</Offset>
+        <Offset>3E0</Offset>
+        <Offset>10</Offset>
+        <Offset>26C</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>28</ID>
+      <Description>"pointerscan result"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>"pel.exe"+001B3540</Address>
+      <Offsets>
+        <Offset>0</Offset>
+        <Offset>3E0</Offset>
+        <Offset>10</Offset>
+        <Offset>26C</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>29</ID>
+      <Description>"pointerscan result"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>"pel.exe"+001B3438</Address>
+      <Offsets>
+        <Offset>0</Offset>
+        <Offset>40C</Offset>
+        <Offset>10</Offset>
+        <Offset>26C</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>30</ID>
+      <Description>"pointerscan result"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>"pel.exe"+001B3540</Address>
+      <Offsets>
+        <Offset>0</Offset>
+        <Offset>40C</Offset>
+        <Offset>10</Offset>
+        <Offset>26C</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>31</ID>
+      <Description>"pointerscan result"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>"pel.exe"+001B353C</Address>
+      <Offsets>
+        <Offset>0</Offset>
+        <Offset>14</Offset>
+        <Offset>1C</Offset>
+        <Offset>30</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>32</ID>
+      <Description>"pointerscan result"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>"pel.exe"+001B3438</Address>
+      <Offsets>
+        <Offset>0</Offset>
+        <Offset>20</Offset>
+        <Offset>30</Offset>
+        <Offset>434</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>33</ID>
+      <Description>"pointerscan result"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>"pel.exe"+001B3540</Address>
+      <Offsets>
+        <Offset>0</Offset>
+        <Offset>20</Offset>
+        <Offset>30</Offset>
+        <Offset>434</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>34</ID>
+      <Description>"pointerscan result"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>"pel.exe"+001B353C</Address>
+      <Offsets>
+        <Offset>0</Offset>
+        <Offset>8</Offset>
+        <Offset>0</Offset>
+        <Offset>0</Offset>
+        <Offset>30</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>35</ID>
+      <Description>"pointerscan result"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>"pel.exe"+001B353C</Address>
+      <Offsets>
+        <Offset>0</Offset>
+        <Offset>8</Offset>
+        <Offset>14</Offset>
+        <Offset>0</Offset>
+        <Offset>40</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>36</ID>
+      <Description>"pointerscan result"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>"pel.exe"+001B353C</Address>
+      <Offsets>
+        <Offset>0</Offset>
+        <Offset>8</Offset>
+        <Offset>1C</Offset>
+        <Offset>0</Offset>
+        <Offset>30</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>37</ID>
+      <Description>"pointerscan result"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>"pel.exe"+001B353C</Address>
+      <Offsets>
+        <Offset>0</Offset>
+        <Offset>8</Offset>
+        <Offset>10</Offset>
+        <Offset>C</Offset>
+        <Offset>30</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>38</ID>
+      <Description>"pointerscan result"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>"pel.exe"+001B353C</Address>
+      <Offsets>
+        <Offset>0</Offset>
+        <Offset>8</Offset>
+        <Offset>C</Offset>
+        <Offset>10</Offset>
+        <Offset>30</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>39</ID>
+      <Description>"pointerscan result"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>"pel.exe"+001B353C</Address>
+      <Offsets>
+        <Offset>0</Offset>
+        <Offset>8</Offset>
+        <Offset>4</Offset>
+        <Offset>18</Offset>
+        <Offset>30</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>40</ID>
+      <Description>"pointerscan result"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>"pel.exe"+001B353C</Address>
+      <Offsets>
+        <Offset>0</Offset>
+        <Offset>8</Offset>
+        <Offset>0</Offset>
+        <Offset>1C</Offset>
+        <Offset>30</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>41</ID>
+      <Description>"pointerscan result"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>"pel.exe"+001B353C</Address>
+      <Offsets>
+        <Offset>0</Offset>
+        <Offset>8</Offset>
+        <Offset>1C</Offset>
+        <Offset>1C</Offset>
+        <Offset>30</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>42</ID>
+      <Description>"pointerscan result"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>"pel.exe"+001B3438</Address>
+      <Offsets>
+        <Offset>0</Offset>
+        <Offset>8</Offset>
+        <Offset>C</Offset>
+        <Offset>30</Offset>
+        <Offset>434</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>43</ID>
+      <Description>"pointerscan result"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>"pel.exe"+001B3540</Address>
+      <Offsets>
+        <Offset>0</Offset>
+        <Offset>8</Offset>
+        <Offset>C</Offset>
+        <Offset>30</Offset>
+        <Offset>434</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>44</ID>
+      <Description>"pointerscan result"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>"pel.exe"+001B353C</Address>
+      <Offsets>
+        <Offset>0</Offset>
+        <Offset>8</Offset>
+        <Offset>0</Offset>
+        <Offset>8</Offset>
+        <Offset>0</Offset>
+        <Offset>40</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>45</ID>
+      <Description>"pointerscan result"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>"pel.exe"+001B353C</Address>
+      <Offsets>
+        <Offset>0</Offset>
+        <Offset>8</Offset>
+        <Offset>0</Offset>
+        <Offset>10</Offset>
+        <Offset>0</Offset>
+        <Offset>30</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>46</ID>
+      <Description>"pointerscan result"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>"pel.exe"+001B353C</Address>
+      <Offsets>
+        <Offset>0</Offset>
+        <Offset>8</Offset>
+        <Offset>0</Offset>
+        <Offset>0</Offset>
+        <Offset>10</Offset>
+        <Offset>30</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>47</ID>
+      <Description>"pointerscan result"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>"pel.exe"+001B353C</Address>
+      <Offsets>
+        <Offset>0</Offset>
+        <Offset>8</Offset>
+        <Offset>0</Offset>
+        <Offset>1C</Offset>
+        <Offset>10</Offset>
+        <Offset>30</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>48</ID>
+      <Description>"pointerscan result"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>"pel.exe"+001B3438</Address>
+      <Offsets>
+        <Offset>0</Offset>
+        <Offset>8</Offset>
+        <Offset>0</Offset>
+        <Offset>0</Offset>
+        <Offset>30</Offset>
+        <Offset>434</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>49</ID>
+      <Description>"pointerscan result"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>"pel.exe"+001B3540</Address>
+      <Offsets>
+        <Offset>0</Offset>
+        <Offset>8</Offset>
+        <Offset>0</Offset>
+        <Offset>0</Offset>
+        <Offset>30</Offset>
+        <Offset>434</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>50</ID>
+      <Description>"pointerscan result"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>"pel.exe"+001B3438</Address>
+      <Offsets>
+        <Offset>0</Offset>
+        <Offset>8</Offset>
+        <Offset>0</Offset>
+        <Offset>1C</Offset>
+        <Offset>30</Offset>
+        <Offset>434</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>51</ID>
+      <Description>"pointerscan result"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>"pel.exe"+001B3540</Address>
+      <Offsets>
+        <Offset>0</Offset>
+        <Offset>8</Offset>
+        <Offset>0</Offset>
+        <Offset>1C</Offset>
+        <Offset>30</Offset>
+        <Offset>434</Offset>
+      </Offsets>
+    </CheatEntry>
+  </CheatEntries>
+  <UserdefinedSymbols/>
+</CheatTable>
