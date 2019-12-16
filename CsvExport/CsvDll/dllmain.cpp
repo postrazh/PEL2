@@ -3,6 +3,9 @@
 #define _CRT_SECURE_NO_WARNINGS
 
 #include <Windows.h>
+#include <WinInet.h> 
+#pragma comment(lib, "Wininet")
+
 #include <stdlib.h>
 #include <time.h>
 
@@ -29,6 +32,13 @@ int g_interval_seconds = 0;
 int g_reset_table_minutes = 0;
 int g_flag = 0;
 std::string g_csv_path;
+
+// ftp
+string g_ftp_server;
+string g_ftp_user;
+string g_ftp_password;
+string g_ftp_local_file;
+string g_ftp_remote_file;
 
 BOOL APIENTRY DllMain( HMODULE hModule,
                        DWORD  ul_reason_for_call,
@@ -268,7 +278,7 @@ bool isConnected()
 	return !connected;
 }
 
-void getConfig()
+void readConfig()
 {
 	// create IPC mem
 	ipc_mem_init(&shared_mem, (char*)"ipc_PEL_memory", 1024);
@@ -288,12 +298,38 @@ void getConfig()
 		g_flag = *p;
 		p++;
 
-		// read csv_path
-		TCHAR buf[MAX_PATH];
-		lstrcpyn(buf, (LPCWSTR)p, MAX_PATH);
+		CHAR *q = (CHAR*)p;
+		CHAR buf[MAX_PATH];
 
-		std::wstring csv_path_w = buf;
-		g_csv_path = std::string(csv_path_w.begin(), csv_path_w.end());
+		// read csv_path
+		lstrcpynA(buf, q, MAX_PATH);
+		g_csv_path = string(buf);
+		q += MAX_PATH;
+
+		// read ftp_server
+		lstrcpynA(buf, q, MAX_PATH);
+		g_ftp_server = string(buf);
+		q += MAX_PATH;
+
+		// read ftp_user
+		lstrcpynA(buf, q, MAX_PATH);
+		g_ftp_user = string(buf);
+		q += MAX_PATH;
+
+		// read ftp_password
+		lstrcpynA(buf, q, MAX_PATH);
+		g_ftp_password = string(buf);
+		q += MAX_PATH;
+
+		// read ftp_local_file
+		lstrcpynA(buf, q, MAX_PATH);
+		g_ftp_local_file = string(buf);
+		q += MAX_PATH;
+
+		// read ftp_remote_file
+		lstrcpynA(buf, q, MAX_PATH);
+		g_ftp_remote_file = string(buf);
+		q += MAX_PATH;
 	}
 
 	// clean up
@@ -453,6 +489,54 @@ void WriteCsvRow()
 	}
 }
 
+BOOL uploadToFtp(string server, string user, string password, string localFile, string remoteFile)
+{
+	HINTERNET hInternet;
+	HINTERNET hFtpSession;
+	hInternet = InternetOpen(NULL, INTERNET_OPEN_TYPE_DIRECT, NULL, NULL, 0);
+	if (hInternet == NULL)
+	{
+		return FALSE;
+	}
+	else
+	{
+		hFtpSession = InternetConnectA(hInternet, server.c_str(), INTERNET_DEFAULT_FTP_PORT,
+			user.c_str(), password.c_str(), INTERNET_SERVICE_FTP, 0, 0);
+		if (hFtpSession == NULL)
+		{
+			return FALSE;
+		}
+		else
+		{
+			if (!FtpPutFileA(hFtpSession, localFile.c_str(), remoteFile.c_str(), FTP_TRANSFER_TYPE_BINARY, 0))
+			{
+				return FALSE;
+			}
+		}
+	}
+
+	return TRUE;
+}
+
+void resetCsvFile()
+{
+	// upload csv file
+	if (uploadToFtp(g_ftp_server, g_ftp_user, g_ftp_password, g_ftp_local_file, g_ftp_remote_file)) {
+		cout << "Uploaed succcessfully!" << endl;
+	}
+	else {
+		cout << "Upload failed." << endl;
+	}
+
+	// delete file
+	delete_file(g_csv_path);
+	
+	// write the csv header if needed
+	if (!is_exists(g_csv_path)) {
+		WriteCsvHeader();
+	}
+}
+
 /*
 Main Thread
 
@@ -466,12 +550,11 @@ DWORD WINAPI dwMain(LPVOID lpArg)
 	// initial sleep
 	Sleep(5000);
 
-	//
-	//int *p = 0;
-	//*p = 0;
-
 	// get the config data
-	getConfig();
+	readConfig();
+
+	// test
+	resetCsvFile();
 
 	if (g_interval_seconds < 1)
 		g_interval_seconds = 1;
@@ -499,11 +582,7 @@ DWORD WINAPI dwMain(LPVOID lpArg)
 		reset_counter -= g_interval_seconds;
 		if (reset_counter <= 0)
 		{
-			delete_file(g_csv_path);
-			// write the csv header if needed
-			if (!is_exists(g_csv_path)) {
-				WriteCsvHeader();
-			}
+			resetCsvFile();
 
 			reset_counter = reset_limit;
 		}
@@ -522,43 +601,6 @@ DWORD WINAPI dwMain(LPVOID lpArg)
 		if (bConnected) {
 			WriteCsvRow();
 		} 
-		
-
-		//// keyboard
-		//if (GetAsyncKeyState(VK_NUMPAD1) & 1)
-		//{
-		//	csv.newRow() << "this" << "is" << "the" << "first" << "row";
-		//	csv.newRow() << "this" << "is" << "the" << "second" << "row";
-		//	if (!csv.writeToFile("foobar.csv")) {
-		//		printf_s("Can not write to the csv file.\n");
-		//	}
-
-
-		//	if (!isConnected()) {
-		//		printf_s("Not connected.\n");
-		//		continue;
-		//	}
-
-		//	printf_s("----------------- RMS --------------- \n");
-
-		//	printRMS();
-
-		//	printf_s("------------------------------------- \n\n");
-		//}
-
-		//if (GetAsyncKeyState(VK_NUMPAD2) & 1)
-		//{
-		//	if (!isConnected()) {
-		//		printf_s("Not connected.\n");
-		//		continue;
-		//	}
-
-		//	printf_s("----------------- PQS --------------- \n");
-
-		//	printPQS();
-
-		//	printf_s("------------------------------------- \n\n");
-		//}
 
 	}
 

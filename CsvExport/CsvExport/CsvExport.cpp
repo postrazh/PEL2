@@ -163,32 +163,28 @@ inline bool is_exists(const std::string& name) {
 	}
 }
 
-void LoadConfig()
+void ReadConfig()
 {
 	const char* confie_file_name = "PEL.ini";
 	if (!is_exists(confie_file_name)) {
-		config_file file(confie_file_name, config_file::WRITE);
+		config_file config_writer(confie_file_name, config_file::WRITE);
 
-		file.put("interval_seconds", 5);
-		file.put("reset_table_minutes", 10);
-		file.put("csv_path", "C:\\out.csv");
+		config_writer.put("interval_seconds", 5);
+		config_writer.put("reset_table_minutes", 10);
+		config_writer.put("csv_path", "C:\\out.csv");
+		config_writer.put("ftp_server", "192.168.2.119");
+		config_writer.put("ftp_user", "user1");
+		config_writer.put("ftp_password", "password1");
+		config_writer.put("ftp_local_file", "c:\\out.csv");
+		config_writer.put("ftp_remote_file", "/PEL_uploaded.csv");
 
 		//write changes
-		file.write_changes();
+		config_writer.write_changes();
 		//close the file
-		file.close();
+		config_writer.close();
 	}
 
-	config_file rfile(confie_file_name, config_file::READ);
-
-	//retrieve values
-	int interval_seconds = rfile.get<int>("interval_seconds");
-	int reset_table_minutes = rfile.get<int>("reset_table_minutes");
-	std::string csv_path = rfile.get<string>("csv_path");
-	std::wstring csv_path_w(csv_path.begin(), csv_path.end());
-	
-	//close the file
-	rfile.close();
+	config_file config(confie_file_name, config_file::READ);
 
 	// create IPC mem
 	ipc_mem_init(&mem, (char*)"ipc_PEL_memory", 1024);
@@ -203,10 +199,12 @@ void LoadConfig()
 		int *p = (int*)mem.data;
 
 		// write the interval_seconds
+		int interval_seconds = config.get<int>("interval_seconds");
 		*p = interval_seconds;
 		p++;
 
 		// write the reset_table_minutes
+		int reset_table_minutes = config.get<int>("reset_table_minutes");
 		*p = reset_table_minutes;
 		p++;
 
@@ -214,15 +212,48 @@ void LoadConfig()
 		*p = gFlag;
 		p++;
 
+		CHAR* q = (CHAR*)p;
+		string value;
+
 		// write the csv_path
-		lstrcpyn((LPWSTR)p, csv_path_w.c_str(), MAX_PATH);
+		value = config.get<string>("csv_path");
+		lstrcpynA(q, value.c_str(), MAX_PATH);
+		q += MAX_PATH;
+
+		// write the ftp_server
+		value = config.get<string>("ftp_server");
+		lstrcpynA(q, value.c_str(), MAX_PATH);
+		q += MAX_PATH;
+
+		// write the ftp_user
+		value = config.get<string>("ftp_user");
+		lstrcpynA(q, value.c_str(), MAX_PATH);
+		q += MAX_PATH;
+
+		// write the ftp_password
+		value = config.get<string>("ftp_password");
+		lstrcpynA(q, value.c_str(), MAX_PATH);
+		q += MAX_PATH;
+
+		// write the ftp_local_file
+		value = config.get<string>("ftp_local_file");
+		lstrcpynA(q, value.c_str(), MAX_PATH);
+		q += MAX_PATH;
+
+		// write the ftp_remote_file
+		value = config.get<string>("ftp_remote_file");
+		lstrcpynA(q, value.c_str(), MAX_PATH);
+		q += MAX_PATH;
 	}
+
+	//close the file
+	config.close();
 }
 
 BOOL initPEL()
 {
 	// Load config
-	LoadConfig();
+	ReadConfig();
 
 	// Inject
 	LPCWSTR dllName = _T("CsvDll.dll");
