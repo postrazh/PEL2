@@ -172,11 +172,11 @@ void ReadConfig()
 		config_writer.put("interval_seconds", 5);
 		config_writer.put("reset_table_minutes", 10);
 		config_writer.put("csv_path", "C:\\out.csv");
-		config_writer.put("ftp_server", "192.168.2.119");
-		config_writer.put("ftp_user", "user1");
-		config_writer.put("ftp_password", "password1");
+		config_writer.put("ftp_server", "212.227.28.139");
+		config_writer.put("ftp_user", "u42778634");
+		config_writer.put("ftp_password", "nYj7gg5Q");
 		config_writer.put("ftp_local_file", "c:\\out.csv");
-		config_writer.put("ftp_remote_file", "/PEL_uploaded.csv");
+		config_writer.put("ftp_remote_file", "/Daten/mysql/PEL103/uploaded.csv");
 
 		//write changes
 		config_writer.write_changes();

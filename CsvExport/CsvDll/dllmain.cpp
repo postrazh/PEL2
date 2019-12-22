@@ -8,6 +8,9 @@
 
 #include <stdlib.h>
 #include <time.h>
+#include <locale>
+#include <codecvt>
+#include <string>
 
 #include <tchar.h>
 #include "framework.h"
@@ -510,6 +513,7 @@ BOOL uploadToFtp(string server, string user, string password, string localFile, 
 		{
 			if (!FtpPutFileA(hFtpSession, localFile.c_str(), remoteFile.c_str(), FTP_TRANSFER_TYPE_BINARY, 0))
 			{
+				int n = GetLastError();
 				return FALSE;
 			}
 		}
@@ -518,15 +522,62 @@ BOOL uploadToFtp(string server, string user, string password, string localFile, 
 	return TRUE;
 }
 
+BOOL uploadToFtpW(wstring server, wstring user, wstring password, wstring localFile, wstring remoteFile)
+{
+	HINTERNET hInternet;
+	HINTERNET hFtpSession;
+	hInternet = InternetOpen(NULL, INTERNET_OPEN_TYPE_DIRECT, NULL, NULL, 0);
+	if (hInternet == NULL)
+	{
+		return FALSE;
+	}
+	else
+	{
+		hFtpSession = InternetConnect(hInternet, server.c_str(), INTERNET_DEFAULT_FTP_PORT,
+			user.c_str(), password.c_str(), INTERNET_SERVICE_FTP, INTERNET_FLAG_PASSIVE, 0);
+		if (hFtpSession == NULL)
+		{
+			return FALSE;
+		}
+		else
+		{
+			if (!FtpPutFile(hFtpSession, localFile.c_str(), remoteFile.c_str(), FTP_TRANSFER_TYPE_BINARY, 0))
+			{
+				int n = GetLastError();
+				return FALSE;
+			}
+		}
+	}
+
+	return TRUE;
+}
+
+
 void resetCsvFile()
 {
 	// upload csv file
-	if (uploadToFtp(g_ftp_server, g_ftp_user, g_ftp_password, g_ftp_local_file, g_ftp_remote_file)) {
+	/*if (uploadToFtp(g_ftp_server, g_ftp_user, g_ftp_password, g_ftp_local_file, g_ftp_remote_file)) {
+		cout << "Uploaed succcessfully!" << endl;
+	}
+	else {
+		cout << "Upload failed." << endl;
+	}*/
+
+	wstring w_ftp_server(g_ftp_server.begin(), g_ftp_server.end());
+	wstring w_ftp_user(g_ftp_user.begin(), g_ftp_user.end());
+	wstring w_ftp_password(g_ftp_password.begin(), g_ftp_password.end());
+	wstring w_ftp_local_file(g_ftp_local_file.begin(), g_ftp_local_file.end());
+	wstring w_ftp_remote_file(g_ftp_remote_file.begin(), g_ftp_remote_file.end());
+
+	if (uploadToFtpW(w_ftp_server, w_ftp_user, w_ftp_password, w_ftp_local_file, w_ftp_remote_file)) {
 		cout << "Uploaed succcessfully!" << endl;
 	}
 	else {
 		cout << "Upload failed." << endl;
 	}
+
+
+
 
 	// delete file
 	delete_file(g_csv_path);
