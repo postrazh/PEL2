@@ -93,7 +93,7 @@ class CSVWriter
 
         CSVWriter& newRow(){
             if(!this->firstRow || this->columnNum > -1){
-                ss << endl;
+                //ss << endl;
             }else{
                 //if the row is the first row, do not insert a new line
                 this->firstRow = false;
