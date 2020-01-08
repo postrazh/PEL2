@@ -111,9 +111,9 @@ class CSVWriter
 
             if(!file.is_open())
                 return false;
-            if(append)
-                file << endl;
             file << this->toString();
+			if (append)
+				file << endl;
             file.close();
             return file.good();
         }
