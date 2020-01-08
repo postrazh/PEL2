@@ -583,9 +583,9 @@ void resetCsvFile()
 	delete_file(g_csv_path);
 	
 	// write the csv header if needed
-	if (!is_exists(g_csv_path)) {
+	/*if (!is_exists(g_csv_path)) {
 		WriteCsvHeader();
-	}
+	}*/
 }
 
 /*
